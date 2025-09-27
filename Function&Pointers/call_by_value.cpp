@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int swap(int a, int b)
+{
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    return a, b;
+}
+// Difference between Call by Value and Call by Reference must be done from Google
+int main()
+{
+    int x, y;
+    cout << "Please Enter Two Numbers: " << endl;
+    cin >> x >> y;
+    cout << "Before Swapping: " << x << " " << y << endl;
+    swap(x, y);
+    cout << "After Swapping: " << x << " " << y << endl;
+    return 0;
+}
