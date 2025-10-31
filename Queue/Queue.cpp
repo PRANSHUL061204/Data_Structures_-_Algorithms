@@ -34,6 +34,8 @@ public:
     }
     void display()
     {
+        if(front==0)
+        cout<<"\n No Elements in the Queue";
         cout << "\n Elements in the Queue are:";
 
         while (front != rear)
