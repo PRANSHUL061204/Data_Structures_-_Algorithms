@@ -1,3 +1,4 @@
+// Linked list insertion at front and changing Head
 #include <iostream>
 using namespace std;
 class node
@@ -14,7 +15,7 @@ public:
 class LinkedList
 {
 private:
-    node *head, *tail;
+    node *head;
 
 public:
     LinkedList()
@@ -35,6 +36,20 @@ public:
             temp = temp->next;
         }
         temp->next = newnode;
+    }
+    void insert_front(int val)
+    {
+        node *newnode = new node(val);
+        if (head == NULL)
+        {
+            head = newnode;
+            return;
+        }
+        else
+        {
+            newnode->next = head;
+            head = newnode;
+        }
     }
     void display()
     {
@@ -61,5 +76,8 @@ int main()
     list.insert(13);
     list.insert(14);
     list.insert(15);
+    list.display();
+    cout<<endl;
+    list.insert_front(10);
     list.display();
 }

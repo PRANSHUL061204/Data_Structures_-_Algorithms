@@ -1,5 +1,10 @@
+//   1 4 9 16 25
+//   1 4 9 16 25
+//   1 4 9 16 25 
+//   1 4 9 16 25
+//   1 4 9 16 25
 #include <iostream>
-using namespace std;
+    using namespace std;
 int main()
 {
     for (int i = 0; i < 5; i++)
