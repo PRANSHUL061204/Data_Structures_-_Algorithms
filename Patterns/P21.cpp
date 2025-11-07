@@ -1,3 +1,4 @@
+// Program to print Diamond.
 #include<iostream>
 using namespace std;
 int main()  

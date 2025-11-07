@@ -1,3 +1,4 @@
+// Program to print Diamond Cover.
 #include <iostream>
 using namespace std;
 int main()

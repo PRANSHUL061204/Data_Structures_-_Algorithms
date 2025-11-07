@@ -1,6 +1,16 @@
+//  1
+//  2 2 
+//  3 3 3 
+//  4 4 4 4 
+//  5 5 5 5 5
 
+//     A
+//     B B
+//     C C C
+//     D D D D
+//     E E E E E
 #include <iostream>
-using namespace std;
+    using namespace std;
 int main()
 {
     int i;

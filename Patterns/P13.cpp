@@ -1,6 +1,16 @@
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
 
+// A B C D E
+// A B C D
+// A B C
+// A B
+// A
 #include <iostream>
-using namespace std;
+              using namespace std;
 int main()
 {
     int i;
