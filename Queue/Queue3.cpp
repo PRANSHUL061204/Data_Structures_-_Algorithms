@@ -29,11 +29,12 @@ public:
     void insert(int val)
     {
         Node *Newnode = new Node(val);
-        if(tail==nullptr)
-        head=tail=Newnode;
-        else{
-        tail->next=Newnode;
-        tail=Newnode;
+        if (tail == nullptr)
+            head = tail = Newnode;
+        else
+        {
+            tail->next = Newnode;
+            tail = Newnode;
         }
     }
     bool isEmpty()
@@ -51,23 +52,26 @@ public:
         Node *temp = head;
         while (temp != nullptr)
         {
-            cout << temp->data << "  " << endl;
+            cout << temp->data << "  ";
             temp = temp->next;
         }
+        cout << "\n";
     }
-    // void del()
-    // {
-    //     if (isEmpty())
-    //     {
-    //         cout << "Stack Underflow!!\n";
-    //         return;
-    //     }
-    //     Node *temp = top;
-    //     cout << "Popped Element is: " << top->data << "  " << endl;
-    //     top = top->next;
-    //     delete temp;
-    // }
-  
+    void del()
+    {
+        if (head == NULL)
+        {
+            cout << "Queue is Empty";
+            return;
+        }
+        Node *temp = head;
+        head = temp->next;
+        delete temp;
+    }
+    //    null|34|3->3|35|4
+    void peek(){
+        cout<<"\nFront Element of the Queue is: "<<head->data<<endl;
+    }
 };
 int main()
 {
@@ -77,5 +81,10 @@ int main()
     q.insert(13);
     q.insert(14);
     q.insert(15);
+    q.display();
+    q.del();
+    q.peek();
+    q.del();
+    q.del();
     q.display();
 }
