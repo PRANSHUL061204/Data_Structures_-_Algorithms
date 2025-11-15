@@ -45,10 +45,10 @@ public:
     {
         if (isEmpty())
         {
-            cout << "Queue is Empty.\n";
+            cout << "\nQueue is Empty.\n";
             return;
         }
-        cout << "Queue Elements are: ";
+        cout << "\nQueue Elements are: ";
         Node *temp = head;
         while (temp != nullptr)
         {
@@ -69,8 +69,23 @@ public:
         delete temp;
     }
     //    null|34|3->3|35|4
-    void peek(){
-        cout<<"\nFront Element of the Queue is: "<<head->data<<endl;
+    void peek()
+    {
+        if (head == NULL)
+        {
+            cout << "\n Queue is Empty..\n";
+            return;
+        }
+        cout << "\nFront Element of the Queue is: " << head->data << endl;
+    }
+    void seek()
+    {
+        if (tail == NULL)
+        {
+            cout << "\n Queue is Empty..\n";
+            return;
+        }
+        cout << "\nLast Element of the Queue is: " << tail->data << endl;
     }
 };
 int main()
@@ -84,6 +99,7 @@ int main()
     q.display();
     q.del();
     q.peek();
+    q.seek();
     q.del();
     q.del();
     q.display();
